@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ffe5d9, #cdeefd);
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #ddd;
+}
+
+/* Text Section */
+.editable-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Square Box Styling - Gradient Variations */
+.box {
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px; /* Square size */
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Unique gradients for each box */
+.box-1 {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Orange-Pink */
+}
+
+.box-2 {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple-Blue */
+}
+
+.box-3 {
+    background: linear-gradient(135deg, #11998e, #38ef7d); /* Teal-Green */
+}
+
+.box-4 {
+    background: linear-gradient(135deg, #fc5c7d, #6a82fb); /* Pink-Blue */
+}
+
+/* Hover effect */
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Link Styling */
+.box-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Fade-in effect */
+.fade-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    .box {
+        height: 150px;
+    }
+}

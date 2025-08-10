@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhya's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Profile Section -->
+    <section class="text-center p-4">
+        <!-- Profile Image -->
+        <img src="./adhya.JPG" alt="Portrait of Adhya Jain" class="rounded-circle img-fluid profile-img">
+
+        <!-- Name & Intro -->
+        <h1 class="mt-4">Hey, I'm Adhya</h1>
+        <p class="lead mt-3">
+            I’m a passionate learner who loves creating beautiful and functional websites.  
+            Welcome to my little corner of the internet!
+        </p>
+
+        <!-- Editable Paragraph -->
+        <p class="editable-text mt-4">
+            I’m passionate about creating visually appealing and functional websites, combining 
+            creativity with technical skills to deliver user-friendly experiences. Outside of coding,
+             I enjoy playing badminton, which keeps me active and sharp. I also have strong
+              problem-solving skills, allowing me to approach challenges logically and find effective solutions.
+        </p>
+    </section>
+
+    <!-- Project Links Section -->
+    <section class="container text-center mt-4">
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 fade-box">
+                <a href="https://adhya-a-jain.github.io/food_ordering/" class="box-link">
+                    <div class="box box-1 d-flex align-items-center justify-content-center">FoodWebsite</div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 fade-box">
+                <a href="https://adhya-a-jain.github.io/Grid/" class="box-link">
+                    <div class="box box-2 d-flex align-items-center justify-content-center">CSS Grid demonstration project</div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 fade-box">
+                <a href="https://adhya-a-jain.github.io/tindog/" class="box-link">
+                    <div class="box box-3 d-flex align-items-center justify-content-center">TinDog</div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 fade-box">
+                <a href="https://adhya-a-jain.github.io/simon/" class="box-link">
+                    <div class="box box-4 d-flex align-items-center justify-content-center">Simon Game</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fade-in Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const boxes = document.querySelectorAll(".fade-box");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("fade-in");
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            boxes.forEach(box => observer.observe(box));
+        });
+    </script>
+</body>
+</html>
